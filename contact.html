@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Start Planning | Travel by B &amp; T</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <span class="logo-mark">TBT</span>
+      <span class="logo-text">Travel by B &amp; T</span>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="active">Start Planning</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Start Planning Your Trip</h1>
+      <p class="page-intro">
+        Tell us a little about what you’re dreaming of, and we’ll follow up with next steps and options. 
+        No obligation—just a conversation to see what fits.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid two">
+      <div>
+        <h2>Trip Planning Request</h2>
+        <p>
+          Use the form below to share key details. The more you can tell us up front, the better we can tailor your 
+          recommendations.
+        </p>
+
+        <!-- Simple Email Form – you can replace this with a form provider later -->
+        <form class="contact-form" action="mailto:you@yourdomain.com" method="post" enctype="text/plain">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="Name" required>
+
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="Email" required>
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="Phone">
+
+          <label for="contact-method">Preferred Contact Method</label>
+          <select id="contact-method" name="Preferred Contact Method">
+            <option>Email</option>
+            <option>Phone</option>
+            <option>Text (if available)</option>
+          </select>
+
+          <label for="who-traveling">Who is traveling?</label>
+          <select id="who-traveling" name="Who is traveling">
+            <option>Just me</option>
+            <option>Couple</option>
+            <option>Family</option>
+            <option>Friends/Group</option>
+          </select>
+
+          <label for="destination">Destination(s) or ideas</label>
+          <textarea id="destination" name="Destination Ideas" rows="3"></textarea>
+
+          <label for="dates">Preferred travel dates or timeframe</label>
+          <input type="text" id="dates" name="Dates / Timeframe" placeholder="Example: June 2026, flexible by 1 week">
+
+          <label for="budget">Approximate total budget</label>
+          <select id="budget" name="Budget">
+            <option>Under $2,500</option>
+            <option>$2,500 – $5,000</option>
+            <option>$5,000 – $10,000</option>
+            <option>$10,000+</option>
+          </select>
+
+          <label for="trip-type">Type of trip (select all that apply)</label>
+          <textarea id="trip-type" name="Trip Type" rows="2" placeholder="Cruise, all-inclusive, Europe, group, etc."></textarea>
+
+          <label for="notes">Anything else we should know?</label>
+          <textarea id="notes" name="Additional Notes" rows="4"></textarea>
+
+          <button type="submit" class="btn btn-primary full-width">Submit Trip Request</button>
+        </form>
+
+        <p class="small-text">
+          Note: This basic form sends an email from your mail client. Later, you can replace it with a form from your 
+          CRM, Google Forms, or another tool for better tracking.
+        </p>
+      </div>
+      <div>
+        <h2>Other Ways to Connect</h2>
+        <p>
+          Prefer to talk first? Reach out directly and we’ll coordinate next steps.
+        </p>
+        <p>
+          <strong>Email:</strong> you@yourdomain.com<br>
+          <strong>Phone:</strong> (555) 555-5555
+        </p>
+        <p>
+          <strong>Typical Response Time:</strong><br>
+          Within one business day for new trip requests.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="logo footer-logo">
+        <span class="logo-mark">TBT</span>
+        <span class="logo-text">Travel by B &amp; T</span>
+      </div>
+      <p class="footer-text">
+        Travel should feel exciting, not exhausting. Let us handle the planning so you can enjoy the trip.
+      </p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Start Planning</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; <span id="year"></span> Travel by B &amp; T. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
