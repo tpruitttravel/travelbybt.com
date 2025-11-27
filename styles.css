@@ -63,9 +63,8 @@ body {
 }
 
 .logo-image {
-  height: 52px;       /* adjust as needed */
+  height: 90px;       /* adjust as needed */
   width: auto;
-  display: block;
 }
 
 /* Navigation */
