@@ -8,6 +8,29 @@
 </head>
 <body>
 
+<!-- ANNOUNCEMENT BAR – HOME PAGE ONLY -->
+<div class="announcement-bar">
+  <div class="container announcement-inner">
+    <div class="announcement-main">
+      <span class="announcement-label">Now Booking</span>
+      <span id="announcement-season" class="announcement-season">
+        2026 &amp; 2027 Cruises
+      </span>
+    </div>
+
+    <div class="announcement-logos">
+      <!-- Text “logos” – you can later swap these for real logo images if you want -->
+      <span class="cruise-badge">Royal Caribbean</span>
+      <span class="cruise-badge">Carnival</span>
+      <span class="cruise-badge">MSC</span>
+      <span class="cruise-badge">Celebrity</span>
+      <span class="cruise-badge">Norwegian</span>
+    </div>
+
+    <a href="contact.html" class="announcement-cta">Start Planning</a>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo">
@@ -157,7 +180,7 @@
 
         <div class="card cruise-deal-card">
           <h3>10–11 Night Mediterranean</h3>
-          <p class="deal-line">Italy, Croatia, Greece & more</p>
+          <p class="deal-line">Italy, Croatia, Greece &amp; more</p>
           <ul class="bullet-list">
             <li>Combine iconic cities and coastal towns</li>
             <li>Great for milestone trips</li>
@@ -166,8 +189,8 @@
         </div>
 
         <div class="card cruise-deal-card">
-          <h3>Group & Celebration Cruises</h3>
-          <p class="deal-line">For birthdays, reunions & more</p>
+          <h3>Group &amp; Celebration Cruises</h3>
+          <p class="deal-line">For birthdays, reunions &amp; more</p>
           <ul class="bullet-list">
             <li>Group space on select sailings</li>
             <li>Support with communication to guests</li>
@@ -189,7 +212,7 @@
         <h2 class="section-title">Why Book with Travel by B & T</h2>
         <ul class="bullet-list">
           <li>Personalized, detail-focused planning</li>
-          <li>Gateway Travel host agency support & preferred suppliers</li>
+          <li>Gateway Travel host agency support &amp; preferred suppliers</li>
           <li>Clear communication—no fine-print surprises</li>
           <li>Assistance before, during, and after travel</li>
           <li>Most services at no extra cost to you</li>
@@ -236,7 +259,54 @@
 </footer>
 
 <script>
+  // Footer year
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Seasonal auto-rotating banner text
+  (function () {
+    const el = document.getElementById('announcement-season');
+    if (!el) return;
+
+    const month = new Date().getMonth(); // 0–11
+
+    let messages;
+
+    // Rough seasonal buckets
+    if (month >= 0 && month <= 2) { // Jan–Mar
+      messages = [
+        "Spring Break 2026 & 2027 Cruises",
+        "Early Summer 2026 & 2027 Caribbean Sailings",
+        "Family-Friendly 2026 & 2027 Cruise Getaways"
+      ];
+    } else if (month >= 3 && month <= 5) { // Apr–Jun
+      messages = [
+        "Summer 2026 & 2027 Caribbean & Bahamas Cruises",
+        "2026 & 2027 Mediterranean & Europe Sailings",
+        "Alaska & Cool-Climate 2026 & 2027 Cruises"
+      ];
+    } else if (month >= 6 && month <= 8) { // Jul–Sep
+      messages = [
+        "Fall 2026 & 2027 Europe & Mediterranean Cruises",
+        "Caribbean & Mexico 2026 & 2027 Getaways",
+        "Group & Celebration 2026 & 2027 Cruises"
+      ];
+    } else { // Oct–Dec
+      messages = [
+        "Holiday & Winter 2026 & 2027 Caribbean Cruises",
+        "New Year & Wave Season 2026 & 2027 Deals",
+        "Last-Minute 2026 & 2027 Cruise Opportunities"
+      ];
+    }
+
+    let idx = 0;
+    function setMessage() {
+      el.textContent = messages[idx];
+      idx = (idx + 1) % messages.length;
+    }
+
+    setMessage();
+    setInterval(setMessage, 7000); // rotate every 7 seconds
+  })();
 </script>
 
 </body>
