@@ -471,14 +471,14 @@ a {
 
 .advisor-photo-wrap {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;   /* center the image above the info */
   margin-bottom: 10px;
 }
 
 .advisor-photo {
-  width: 100px;
-  height: 80px;
-  border-radius: 16px;                  /* rounded rectangle */
+  width: 110px;              /* square, a bit bigger */
+  height: 110px;
+  border-radius: 0;          /* back to true squares */
   object-fit: cover;
   border: 3px solid var(--brand-gold);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -529,8 +529,8 @@ a {
   }
 
   .advisor-photo {
-    width: 90px;
-    height: 72px;
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -540,12 +540,12 @@ a {
   }
 
   .advisor-photo-wrap {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .advisor-photo {
-    width: 80px;
-    height: 64px;
+    width: 90px;
+    height: 90px;
   }
 }
 
