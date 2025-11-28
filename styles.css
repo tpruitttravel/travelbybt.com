@@ -55,10 +55,10 @@ a {
 
 .header-inner {
   display: flex;
-  flex-direction: column;          /* center everything vertically */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 0 6px 0;
+  padding: 16px 0 6px 0;
 }
 
 .logo {
@@ -68,21 +68,22 @@ a {
   padding: 6px 0 4px 0;
 }
 
+/* BIG, CENTERED LOGO */
 .logo-image {
-  height: 120px;                   /* large logo */
+  height: 120px;          /* adjust this to 100–150px for preference */
   width: auto;
   display: block;
-  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.55));  /* subtle glow for legibility */
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.55));
 }
 
-/* Nav under logo, centered */
+/* Centered nav under logo */
 
 .main-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 22px;
-  margin: 6px 0 6px 0;
+  margin: 10px 0 4px 0;
 }
 
 .main-nav a {
@@ -130,7 +131,7 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(2.1rem, 3vw, 2.7rem);
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
   margin: 0 0 10px 0;
   color: var(--brand-bg-soft);
 }
@@ -372,7 +373,7 @@ a {
   box-shadow: 0 0 0 1px rgba(217, 178, 108, 0.45);
 }
 
-/* FOOTER – centered large logo, polished */
+/* FOOTER – premium, centered, large logo */
 
 .site-footer {
   background: var(--brand-bg-soft);
@@ -436,7 +437,7 @@ a {
 
 @media (max-width: 768px) {
   .logo-image {
-    height: 90px;            /* slightly smaller on mobile but still prominent */
+    height: 90px;
   }
 
   .footer-logo .logo-image {
