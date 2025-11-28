@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Travel by B &amp; T | Ridgeway VA Travel Agent &amp; Cruise Planner</title>
+  <title>Travel by B & T | Ridgeway VA Travel Agent & Cruise Planner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
@@ -174,32 +174,13 @@
     }
 
     @media (max-width: 820px) {
-      .tb-header-inner {
-        padding-inline: 1.1rem;
-      }
-      .tb-nav {
-        gap: 0.75rem;
-        font-size: 0.85rem;
-      }
       .tb-nav-hide-sm {
         display: none;
       }
     }
 
-    @media (max-width: 640px) {
-      .tb-header-inner {
-        flex-wrap: wrap;
-        row-gap: 0.5rem;
-      }
-      .tb-nav {
-        width: 100%;
-        justify-content: flex-end;
-        gap: 0.9rem;
-      }
-    }
-
     /* =========================
-       HERO (NEW COLLAGE)
+       HERO (COLLAGE)
        ========================= */
     .tb-hero {
       background: var(--tb-dark);
@@ -279,8 +260,7 @@
       text-decoration: none;
       cursor: pointer;
       border: 1px solid transparent;
-      transition: background 0.18s ease-out, border-color 0.18s ease-out,
-        transform 0.1s ease-out, box-shadow 0.18s ease-out;
+      transition: 0.18s ease-out;
     }
 
     .tb-hero-cta-primary {
@@ -303,17 +283,6 @@
       border-color: rgba(255, 255, 255, 0.4);
     }
 
-    .tb-hero-cta-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .tb-hero-support-line {
-      margin-top: 1.8rem;
-      font-size: 0.9rem;
-      opacity: 0.82;
-    }
-
-    /* Collage side */
     .tb-hero-media {
       position: relative;
       min-height: 260px;
@@ -332,25 +301,13 @@
       box-shadow: 0 14px 30px rgba(15, 23, 42, 0.65);
     }
 
-    /* TODO: UPDATE THESE URL PATHS TO YOUR REAL IMAGES */
-    .tb-hero-img-1 {
-      background-image: url("/images/hero-caribbean.jpg");
-    }
-
-    .tb-hero-img-2 {
-      background-image: url("/images/hero-mediterranean.jpg");
-    }
-
-    .tb-hero-img-3 {
-      background-image: url("/images/hero-resort.jpg");
-    }
-
-    .tb-hero-img-4 {
-      background-image: url("/images/hero-group.jpg");
-    }
+    .tb-hero-img-1 { background-image: url("/images/hero-caribbean.jpg"); }
+    .tb-hero-img-2 { background-image: url("/images/hero-mediterranean.jpg"); }
+    .tb-hero-img-3 { background-image: url("/images/hero-resort.jpg"); }
+    .tb-hero-img-4 { background-image: url("/images/hero-group.jpg"); }
 
     .tb-hero-img-1 {
-      grid-row: 1 / span 2; /* make main tile taller */
+      grid-row: 1 / span 2;
     }
 
     .tb-hero-media-overlay {
@@ -374,36 +331,8 @@
       background: var(--tb-gold);
     }
 
-    @media (max-width: 800px) {
-      .tb-hero {
-        padding: 2.2rem 1.25rem 3rem;
-      }
-      .tb-hero-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .tb-hero-title {
-        font-size: 2.1rem;
-      }
-      .tb-hero-media {
-        order: -1;
-        margin-bottom: 1.5rem;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .tb-hero {
-        padding-inline: 1.1rem;
-      }
-      .tb-hero-title {
-        font-size: 1.9rem;
-      }
-      .tb-hero-cruise-lines {
-        font-size: 0.86rem;
-      }
-    }
-
     /* =========================
-       GENERIC SECTIONS / CARDS
+       MAIN CONTENT (sections)
        ========================= */
 
     .tb-section {
@@ -439,37 +368,6 @@
       max-width: 36rem;
     }
 
-    .tb-pill-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.55rem 1.2rem;
-      border-radius: var(--tb-radius-pill);
-      border: 1px solid var(--tb-border-subtle);
-      background: #ffffff;
-      font-size: 0.88rem;
-      margin-top: 0.75rem;
-      box-shadow: var(--tb-shadow-card);
-    }
-
-    .tb-pill-link span:last-child {
-      font-size: 1rem;
-      transform: translateY(1px);
-    }
-
-    .tb-two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 1.75rem;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 800px) {
-      .tb-two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
     .tb-card {
       background: var(--tb-card-bg);
       border-radius: var(--tb-radius-lg);
@@ -489,22 +387,29 @@
       margin-top: 0.25rem;
     }
 
-    .tb-tagline {
-      font-size: 0.9rem;
-      margin-top: 0.6rem;
-      color: var(--tb-text-muted);
-    }
-
     .tb-subheading {
       font-size: 1.05rem;
       font-weight: 600;
-      margin: 0.25rem 0 0.35rem;
+      margin-bottom: 0.35rem;
       color: var(--tb-text-main);
     }
 
     .tb-muted {
       color: var(--tb-text-muted);
       font-size: 0.95rem;
+    }
+
+    .tb-two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 1.75rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 800px) {
+      .tb-two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
     .tb-grid-3 {
@@ -523,53 +428,6 @@
       .tb-grid-3 {
         grid-template-columns: minmax(0, 1fr);
       }
-    }
-
-    .tb-destination-label {
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: #9ca3af;
-      margin-bottom: 0.15rem;
-    }
-
-    .tb-cta-row {
-      margin-top: 1.2rem;
-    }
-
-    .tb-btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.7rem 1.3rem;
-      border-radius: var(--tb-radius-pill);
-      border: 1px solid var(--tb-gold);
-      background: var(--tb-gold);
-      font-size: 0.9rem;
-      font-weight: 600;
-      box-shadow: var(--tb-shadow-card);
-    }
-
-    .tb-btn-primary:hover {
-      background: var(--tb-gold-soft);
-      border-color: var(--tb-gold-soft);
-    }
-
-    .tb-btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.65rem 1.1rem;
-      border-radius: var(--tb-radius-pill);
-      border: 1px solid var(--tb-border-subtle);
-      background: #ffffff;
-      font-size: 0.88rem;
-      font-weight: 500;
-      margin-left: 0.5rem;
-    }
-
-    .tb-btn-secondary span:last-child {
-      transform: translateY(1px);
     }
 
     /* =========================
@@ -596,11 +454,6 @@
       filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.75));
     }
 
-    .tb-footer-text {
-      font-size: 0.84rem;
-      line-height: 1.6;
-    }
-
     .tb-footer-links {
       margin-top: 0.75rem;
       font-size: 0.85rem;
@@ -624,22 +477,21 @@
       font-size: 0.78rem;
       color: #6b7280;
     }
-
   </style>
 </head>
 
 <body>
   <div class="tb-page-wrap">
 
-    <!-- HEADER / NAV -->
+    <!-- HEADER -->
     <header class="tb-header">
       <div class="tb-header-inner">
         <a href="/index.html" class="tb-logo-wrap">
           <div class="tb-logo-img">
-            <img src="/logo-travelbybt.png" alt="Travel by B &amp; T logo" />
+            <img src="/logo-travelbybt.png" alt="Travel by B & T logo" />
           </div>
           <div>
-            <div class="tb-logo-text-main">Travel by B &amp; T</div>
+            <div class="tb-logo-text-main">Travel by B & T</div>
             <div class="tb-logo-text-sub">Your Passport to Extraordinary Journeys</div>
           </div>
         </a>
@@ -662,35 +514,28 @@
       <!-- HERO -->
       <section class="tb-hero">
         <div class="tb-hero-inner">
-          <!-- LEFT: TEXT -->
           <div>
-            <div class="tb-hero-topline">
-              Now Booking 2026–2027 Cruises &amp; Getaways
-            </div>
+            <div class="tb-hero-topline">Now Booking 2026–2027 Cruises & Getaways</div>
             <div class="tb-hero-cruise-lines">
-              Royal Caribbean ⚓ Carnival ▪ MSC ✨ Celebrity ▪ Norwegian
+              Royal Caribbean ⚓ Carnival • MSC ✨ Celebrity • Norwegian
             </div>
 
-            <h1 class="tb-hero-title">
-              Your Passport to Extraordinary Journeys
-            </h1>
+            <h1 class="tb-hero-title">Your Passport to Extraordinary Journeys</h1>
 
             <p class="tb-hero-subtitle">
-              Travel by B &amp; T delivers curated, stress-free vacations—cruises, all-inclusives,
+              Travel by B & T delivers curated, stress-free vacations—cruises, all-inclusives,
               custom Europe itineraries, group trips, and more. You dream it, we handle the details.
             </p>
 
             <div class="tb-hero-badges">
-              <span class="tb-hero-badge">Cruises &amp; All-Inclusives</span>
+              <span class="tb-hero-badge">Cruises & All-Inclusives</span>
               <span class="tb-hero-badge">Custom Europe Itineraries</span>
-              <span class="tb-hero-badge">Group &amp; Celebration Travel</span>
+              <span class="tb-hero-badge">Group & Celebration Travel</span>
               <span class="tb-hero-badge">Independent Gateway Travel Partners</span>
             </div>
 
             <div class="tb-hero-ctas">
-              <a href="/contact.html" class="tb-hero-cta-primary">
-                Start Planning My Trip
-              </a>
+              <a href="/contact.html" class="tb-hero-cta-primary">Start Planning My Trip</a>
               <a href="/booking-process.html" class="tb-hero-cta-secondary">
                 See How the Booking Process Works
               </a>
@@ -701,7 +546,6 @@
             </div>
           </div>
 
-          <!-- RIGHT: COLLAGE -->
           <div class="tb-hero-media">
             <div class="tb-hero-img tb-hero-img-1"></div>
             <div class="tb-hero-img tb-hero-img-2"></div>
@@ -710,13 +554,13 @@
 
             <div class="tb-hero-media-overlay">
               <span class="tb-hero-media-dot"></span>
-              <span>Caribbean ▪ Mediterranean ▪ All-Inclusive ▪ Groups</span>
+              <span>Caribbean • Mediterranean • All-Inclusive • Groups</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- PAGE CONTENT -->
+      <!-- CONTENT (Featured, How It Works, etc.) -->
       <div class="tb-container">
 
         <!-- Featured Focus -->
@@ -728,15 +572,14 @@
 
           <div class="tb-card">
             <ul class="tb-list">
-              <li>✨ Caribbean &amp; Bahamas Cruises</li>
-              <li>Italy, Croatia &amp; Mediterranean Journeys</li>
+              <li>✨ Caribbean & Bahamas Cruises</li>
+              <li>Italy, Croatia & Mediterranean Journeys</li>
               <li>All-Inclusive Resort Escapes</li>
-              <li>Group &amp; Celebration Travel</li>
+              <li>Group & Celebration Travel</li>
             </ul>
             <div class="tb-cta-row">
               <a href="/contact.html" class="tb-btn-primary">
-                Start Your Trip Conversation
-                <span>→</span>
+                Start Your Trip Conversation →
               </a>
             </div>
           </div>
@@ -755,34 +598,27 @@
           <div class="tb-two-col">
             <div class="tb-card">
               <h3 class="tb-subheading">1. Connect</h3>
-              <p class="tb-muted">
-                Share your goals, dates, budget, and preferences. We listen first.
-              </p>
+              <p class="tb-muted">Share your goals, dates, budget, and preferences. We listen first.</p>
 
               <h3 class="tb-subheading">2. Curate</h3>
-              <p class="tb-muted">
-                We present curated recommendations tailored to your style—not overwhelming lists.
-              </p>
+              <p class="tb-muted">We present curated recommendations tailored to your style.</p>
 
-              <h3 class="tb-subheading">3. Confirm &amp; Go</h3>
-              <p class="tb-muted">
-                You choose your favorite option. We handle logistics, details, and documents.
-              </p>
+              <h3 class="tb-subheading">3. Confirm & Go</h3>
+              <p class="tb-muted">You choose your favorite option. We handle logistics, details, and documents.</p>
 
               <div class="tb-cta-row">
                 <a href="/booking-process.html" class="tb-btn-secondary">
-                  See the Full Booking Flow
-                  <span>→</span>
+                  See the Full Booking Flow →
                 </a>
               </div>
             </div>
 
             <div class="tb-card">
-              <h3 class="tb-subheading">Serving Ridgeway, Henry County &amp; Beyond</h3>
+              <h3 class="tb-subheading">Serving Ridgeway, Henry County & Beyond</h3>
               <p class="tb-muted">
-                Travel by B &amp; T is based in Ridgeway, Virginia, and proudly serves clients across Henry County,
-                Martinsville, and surrounding communities. Whether you’re planning your first cruise, a quick
-                Caribbean getaway, or a bigger Europe itinerary, we provide local support with global options.
+                Travel by B & T proudly serves clients across Henry County, Martinsville, and surrounding communities.
+                Whether you’re planning your first cruise, a quick Caribbean getaway, or a bigger Europe itinerary, we
+                provide local support with global options.
               </p>
             </div>
           </div>
@@ -798,118 +634,17 @@
           <div class="tb-grid-3">
             <div class="tb-card">
               <h3 class="tb-subheading">Caribbean Cruise Getaways</h3>
-              <p class="tb-muted">
-                Private islands, warm-weather itineraries, and effortless planning.
-              </p>
+              <p class="tb-muted">Private islands, warm-weather itineraries, and effortless planning.</p>
             </div>
 
             <div class="tb-card">
-              <h3 class="tb-subheading">Europe &amp; Mediterranean</h3>
-              <p class="tb-muted">
-                Italy, Croatia, Greece, and beyond—by land or sea.
-              </p>
+              <h3 class="tb-subheading">Europe & Mediterranean</h3>
+              <p class="tb-muted">Italy, Croatia, Greece, and beyond—by land or sea.</p>
             </div>
 
             <div class="tb-card">
               <h3 class="tb-subheading">All-Inclusive Resorts</h3>
-              <p class="tb-muted">
-                One price, unlimited relaxation, and options for couples or families.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Featured Destinations -->
-        <section class="tb-section">
-          <div class="tb-section-header">
-            <div class="tb-kicker">Featured Destinations</div>
-            <h2 class="tb-section-title">Sample Destinations We Help You Explore</h2>
-            <p class="tb-section-lead">
-              A sample of the kinds of places we help clients explore. These are starting points—not limits.
-            </p>
-          </div>
-
-          <div class="tb-grid-3">
-            <div class="tb-card">
-              <div class="tb-destination-label">Caribbean</div>
-              <h3 class="tb-subheading">Eastern &amp; Western Caribbean</h3>
-              <p class="tb-muted">
-                Sun, sea days, private islands, and easy flight connections from many U.S. gateways.
-              </p>
-            </div>
-
-            <div class="tb-card">
-              <div class="tb-destination-label">Europe</div>
-              <h3 class="tb-subheading">Italy &amp; Croatia</h3>
-              <p class="tb-muted">
-                Pair iconic cities like Rome and Venice with coastal stops and Mediterranean cruises.
-              </p>
-            </div>
-
-            <div class="tb-card">
-              <div class="tb-destination-label">Resorts</div>
-              <h3 class="tb-subheading">Mexico &amp; Dominican Republic</h3>
-              <p class="tb-muted">
-                All-inclusive resorts for couples, families, or groups who want a “show up and relax” experience.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Sample Cruise Ideas -->
-        <section class="tb-section">
-          <div class="tb-section-header">
-            <div class="tb-kicker">Sample Cruise Deals &amp; Ideas</div>
-            <h2 class="tb-section-title">Concepts to Spark Your Next Trip</h2>
-            <p class="tb-section-lead">
-              These are example concepts only—pricing and availability change constantly. We’ll quote current offers
-              when you’re ready to plan.
-            </p>
-          </div>
-
-          <div class="tb-two-col">
-            <div class="tb-card">
-              <h3 class="tb-subheading">7-Night Caribbean Cruise</h3>
-              <p class="tb-muted">
-                From select major U.S. ports
-              </p>
-              <ul class="tb-list">
-                <li>Perfect for first-time cruisers</li>
-                <li>Mix of sea days and ports</li>
-                <li>Options for families, couples, and friend groups</li>
-              </ul>
-            </div>
-
-            <div class="tb-card">
-              <h3 class="tb-subheading">10–11 Night Mediterranean</h3>
-              <p class="tb-muted">
-                Italy, Croatia, Greece &amp; more
-              </p>
-              <ul class="tb-list">
-                <li>Combine iconic cities and coastal towns</li>
-                <li>Great for milestone trips</li>
-                <li>Pre- and post-cruise stays available</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="tb-section" style="padding-top: 1.6rem;">
-            <div class="tb-card">
-              <h3 class="tb-subheading">Group &amp; Celebration Cruises</h3>
-              <p class="tb-muted">
-                For birthdays, reunions &amp; more
-              </p>
-              <ul class="tb-list">
-                <li>Group space on select sailings</li>
-                <li>Support with communication to guests</li>
-                <li>Flexible options tailored to your group</li>
-              </ul>
-              <div class="tb-cta-row">
-                <a href="/contact.html" class="tb-btn-primary">
-                  Ask About Current Cruise Offers
-                  <span>→</span>
-                </a>
-              </div>
+              <p class="tb-muted">One price, unlimited relaxation, and options for couples or families.</p>
             </div>
           </div>
         </section>
@@ -917,14 +652,14 @@
         <!-- Why Book With Us -->
         <section class="tb-section">
           <div class="tb-section-header">
-            <div class="tb-kicker">Why Book with Travel by B &amp; T</div>
-            <h2 class="tb-section-title">Your Advocate Before, During &amp; After the Trip</h2>
+            <div class="tb-kicker">Why Book With Travel by B & T</div>
+            <h2 class="tb-section-title">Your Advocate Before, During & After the Trip</h2>
           </div>
 
           <div class="tb-card">
             <ul class="tb-list">
               <li>Personalized, detail-focused planning</li>
-              <li>Gateway Travel host agency support &amp; preferred suppliers</li>
+              <li>Gateway Travel host agency support & preferred suppliers</li>
               <li>Clear communication—no fine-print surprises</li>
               <li>Assistance before, during, and after travel</li>
               <li>Most services at no extra cost to you</li>
@@ -932,25 +667,24 @@
 
             <div class="tb-cta-row">
               <a href="/booking-process.html" class="tb-btn-secondary">
-                View Booking Process
-                <span>→</span>
+                View Booking Process →
               </a>
             </div>
           </div>
         </section>
 
-      </div> <!-- /tb-container -->
+      </div>
     </main>
 
     <!-- FOOTER -->
     <footer class="tb-footer">
       <div class="tb-footer-top">
-        <img src="/logo-travelbybt.png" alt="Travel by B &amp; T logo" class="tb-footer-logo" />
+        <img src="/logo-travelbybt.png" alt="Travel by B & T logo" class="tb-footer-logo" />
+
         <div class="tb-footer-text">
-          Travel by B &amp; T — Independent Travel Advisors &amp; Proud Gateway Travel Partners, serving Ridgeway and
+          Travel by B & T — Independent Travel Advisors & Proud Gateway Travel Partners, serving Ridgeway and
           Henry County, Virginia.<br />
-          Travel by B &amp; T operates as an independent affiliate of Gateway Travel. All bookings are subject to the
-          terms and conditions of Travel by B &amp; T and the respective travel suppliers.
+          All bookings are subject to Travel by B & T and respective travel supplier terms.
         </div>
 
         <div class="tb-footer-links">
@@ -959,12 +693,12 @@
           <a href="/booking-process.html">Booking Process</a>
           <a href="/contact.html">Start Planning</a>
           <a href="/privacy-policy.html">Privacy Policy</a>
-          <a href="/terms.html">Terms &amp; Conditions</a>
+          <a href="/terms.html">Terms & Conditions</a>
         </div>
       </div>
 
       <div class="tb-footer-meta">
-        © Travel by B &amp; T — Independent Affiliate of Gateway Travel. All rights reserved.
+        © Travel by B & T — Independent Affiliate of Gateway Travel. All rights reserved.
       </div>
     </footer>
 
