@@ -476,12 +476,12 @@ a {
 }
 
 .advisor-photo {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
+  width: 100px;
+  height: 80px;
+  border-radius: 16px;                  /* rounded rectangle */
   object-fit: cover;
   border: 3px solid var(--brand-gold);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .advisor-role {
@@ -527,6 +527,11 @@ a {
   .booking-flow {
     grid-template-columns: 1fr 1fr;
   }
+
+  .advisor-photo {
+    width: 90px;
+    height: 72px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -536,6 +541,11 @@ a {
 
   .advisor-photo-wrap {
     justify-content: flex-start;
+  }
+
+  .advisor-photo {
+    width: 80px;
+    height: 64px;
   }
 }
 
