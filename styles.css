@@ -1116,4 +1116,58 @@ h3 {
     order: -1;
   }
 }
+/* =========================================
+   REFINEMENTS – SMOOTHER, LESS BOXY HOME
+========================================= */
+
+/* Make header/hero/content share the same max-width rhythm */
+.tb-hero-inner,
+.tb-footer-top,
+.tb-footer-meta {
+  width: min(96%, 1100px);
+  margin: 0 auto;
+}
+
+/* Smooth hero so it feels like a banner, not a big card */
+.tb-hero {
+  /* keep dark banner feel, but drop the heavy boxy shadow */
+  box-shadow: none;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+  background: radial-gradient(circle at top left, #0b1020 0, #020617 55%, #020617 100%);
+}
+
+/* Slightly more breathing room under hero */
+.tb-section {
+  padding-top: 2.7rem;
+}
+
+/* Soften the cards – still modern, but less “brick” */
+.tb-card {
+  background: radial-gradient(circle at top, #101324, #060710);
+  border-radius: 16px;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid rgba(82, 90, 130, 0.45);       /* less harsh */
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);      /* a bit softer */
+}
+
+/* Slightly lighter text inside cards for readability */
+.tb-muted,
+.tb-list {
+  color: #dde1ff;
+}
+
+/* Hero right-side collage: round corners just a bit more “premium” */
+.tb-hero-img {
+  border-radius: 18px;
+}
+
+/* Reduce header weight a touch so it doesn’t feel like a box on top of a box */
+.tb-header {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.tb-header-inner {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
 
