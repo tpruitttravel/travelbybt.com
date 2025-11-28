@@ -19,12 +19,11 @@
     </div>
 
     <div class="announcement-logos">
-      <!-- Text “logos” – you can later swap these for real logo images if you want -->
-      <span class="cruise-badge">Royal Caribbean</span>
-      <span class="cruise-badge">Carnival</span>
-      <span class="cruise-badge">MSC</span>
-      <span class="cruise-badge">Celebrity</span>
-      <span class="cruise-badge">Norwegian</span>
+      <span class="cruise-badge">🚢 Royal Caribbean</span>
+      <span class="cruise-badge">⚓ Carnival</span>
+      <span class="cruise-badge">🌊 MSC</span>
+      <span class="cruise-badge">✨ Celebrity</span>
+      <span class="cruise-badge">🎉 Norwegian</span>
     </div>
 
     <a href="contact.html" class="announcement-cta">Start Planning</a>
@@ -71,10 +70,10 @@
       <div class="hero-card">
         <h2>Featured Focus</h2>
         <ul>
-          <li>✨ Caribbean & Bahamas Cruises</li>
-          <li>🌍 Italy, Croatia & Mediterranean Journeys</li>
+          <li>✨ Caribbean &amp; Bahamas Cruises</li>
+          <li>🌍 Italy, Croatia &amp; Mediterranean Journeys</li>
           <li>🏝️ All-Inclusive Resort Escapes</li>
-          <li>🎉 Group & Celebration Travel</li>
+          <li>🎉 Group &amp; Celebration Travel</li>
         </ul>
         <a href="contact.html" class="btn btn-secondary full-width">Start Your Trip Conversation</a>
       </div>
@@ -97,7 +96,7 @@
           <p>We present curated recommendations tailored to your style—not overwhelming lists.</p>
         </div>
         <div class="card">
-          <h3>3. Confirm & Go</h3>
+          <h3>3. Confirm &amp; Go</h3>
           <p>You choose your favorite option. We handle logistics, details, and documents.</p>
         </div>
       </div>
@@ -116,7 +115,7 @@
         </div>
 
         <div class="card highlight">
-          <h3>Europe & Mediterranean</h3>
+          <h3>Europe &amp; Mediterranean</h3>
           <p>Italy, Croatia, Greece, and beyond—by land or sea.</p>
         </div>
 
@@ -139,19 +138,19 @@
       <div class="grid three destination-grid">
         <div class="card destination-card">
           <div class="destination-tag">Caribbean</div>
-          <h3>Eastern & Western Caribbean</h3>
+          <h3>Eastern &amp; Western Caribbean</h3>
           <p>Sun, sea days, private islands, and easy flight connections from many U.S. gateways.</p>
         </div>
 
         <div class="card destination-card">
           <div class="destination-tag">Europe</div>
-          <h3>Italy & Croatia</h3>
+          <h3>Italy &amp; Croatia</h3>
           <p>Pair iconic cities like Rome and Venice with coastal stops and Mediterranean cruises.</p>
         </div>
 
         <div class="card destination-card">
           <div class="destination-tag">Resorts</div>
-          <h3>Mexico & Dominican Republic</h3>
+          <h3>Mexico &amp; Dominican Republic</h3>
           <p>All-inclusive resorts for couples, families, or groups who want a “show up and relax” experience.</p>
         </div>
       </div>
@@ -161,7 +160,7 @@
   <!-- CRUISE DEALS -->
   <section class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Sample Cruise Deals & Ideas</h2>
+      <h2 class="section-title">Sample Cruise Deals &amp; Ideas</h2>
       <p class="section-intro">
         These are example concepts only—pricing and availability change constantly. We’ll quote current offers
         when you’re ready to plan.
@@ -209,7 +208,7 @@
   <section class="section">
     <div class="container grid two">
       <div>
-        <h2 class="section-title">Why Book with Travel by B & T</h2>
+        <h2 class="section-title">Why Book with Travel by B &amp; T</h2>
         <ul class="bullet-list">
           <li>Personalized, detail-focused planning</li>
           <li>Gateway Travel host agency support &amp; preferred suppliers</li>
@@ -239,7 +238,7 @@
         <img src="logo-travelbybt.png" alt="Travel by B & T" class="logo-image">
       </div>
       <p class="footer-text">
-        Travel by B & T — Independent Travel Advisors & Proud Gateway Travel Partners.
+        Travel by B & T — Independent Travel Advisors &amp; Proud Gateway Travel Partners.
       </p>
     </div>
 
@@ -254,7 +253,7 @@
   </div>
 
   <div class="footer-bottom">
-    &copy; <span id="year"></span> Travel by B & T — Independent Affiliate of Gateway Travel. All rights reserved.
+    &copy; <span id="year"></span> Travel by B &amp; T — Independent Affiliate of Gateway Travel. All rights reserved.
   </div>
 </footer>
 
@@ -262,13 +261,12 @@
   // Footer year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Seasonal auto-rotating banner text
+  // Seasonal auto-rotating banner text with fade-in
   (function () {
     const el = document.getElementById('announcement-season');
     if (!el) return;
 
     const month = new Date().getMonth(); // 0–11
-
     let messages;
 
     // Rough seasonal buckets
@@ -299,8 +297,16 @@
     }
 
     let idx = 0;
+
     function setMessage() {
+      // Reset animation class to re-trigger CSS keyframes
+      el.classList.remove('season-fade');
+      // Force reflow so the animation can restart
+      void el.offsetWidth;
+
       el.textContent = messages[idx];
+      el.classList.add('season-fade');
+
       idx = (idx + 1) % messages.length;
     }
 
