@@ -2,8 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Travel by B & T | Your Passport to Extraordinary Journeys</title>
+  <title>Travel by B & T | Ridgeway VA Travel Agent & Cruise Planner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Travel by B & T is an independent travel agency and Gateway Travel affiliate based in Ridgeway, Virginia, specializing in cruises, all-inclusive resorts, and custom vacations for Henry County and beyond.">
+  <meta name="keywords" content="Ridgeway VA travel agent, Henry County travel agency, cruise planner, Gateway Travel affiliate, Caribbean cruises, Europe cruises, all-inclusive resorts, Martinsville travel agent">
+  <meta name="author" content="Travel by B & T">
+  <link rel="canonical" href="https://travelbybt.com/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Travel by B & T | Ridgeway VA Travel Agent & Cruise Planner">
+  <meta property="og:description" content="Independent travel advisors and Gateway Travel partners helping Henry County, VA travelers book cruises, all-inclusive resorts, and custom vacations.">
+  <meta property="og:url" content="https://travelbybt.com/">
+  <meta property="og:site_name" content="Travel by B & T">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,7 +28,7 @@
     <div class="announcement-main">
       <span class="announcement-label">Now Booking</span>
       <span id="announcement-season" class="announcement-season">
-        2026 &amp; 2027 Cruises
+        2026–2027 Cruises
       </span>
     </div>
 
@@ -33,7 +47,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo">
-      <img src="logo-travelbybt.png" alt="Travel by B & T" class="logo-image">
+      <img src="logo-travelbybt.png" alt="Travel by B & T travel agency logo" class="logo-image">
     </div>
     <nav class="main-nav">
       <a href="index.html" class="active">Home</a>
@@ -63,7 +77,7 @@
         </div>
 
         <p class="hero-tagline">
-          Independent Travel Advisors & Proud Gateway Travel Partners.
+          Independent Travel Advisors &amp; Proud Gateway Travel Partners, serving Ridgeway and Henry County, Virginia.
         </p>
       </div>
 
@@ -163,7 +177,7 @@
       <h2 class="section-title">Sample Cruise Deals &amp; Ideas</h2>
       <p class="section-intro">
         These are example concepts only—pricing and availability change constantly. We’ll quote current offers
-        when you’re ready to plan.
+       when you’re ready to plan.
       </p>
 
       <div class="grid three cruise-deals-grid">
@@ -235,10 +249,10 @@
   <div class="container footer-inner">
     <div>
       <div class="logo footer-logo">
-        <img src="logo-travelbybt.png" alt="Travel by B & T" class="logo-image">
+        <img src="logo-travelbybt.png" alt="Travel by B & T travel agency logo" class="logo-image">
       </div>
       <p class="footer-text">
-        Travel by B & T — Independent Travel Advisors &amp; Proud Gateway Travel Partners.
+        Travel by B &amp; T — Independent Travel Advisors &amp; Proud Gateway Travel Partners, serving Ridgeway and Henry County, Virginia.
       </p>
     </div>
 
@@ -269,40 +283,38 @@
     const month = new Date().getMonth(); // 0–11
     let messages;
 
-    // Rough seasonal buckets
+    // Keep messages short so they don't wrap
     if (month >= 0 && month <= 2) { // Jan–Mar
       messages = [
-        "Spring Break 2026 & 2027 Cruises",
-        "Early Summer 2026 & 2027 Caribbean Sailings",
-        "Family-Friendly 2026 & 2027 Cruise Getaways"
+        "Winter 2026–2027 Cruises",
+        "Spring Break 2026–2027 Cruises",
+        "Caribbean Sailings 2026–2027"
       ];
     } else if (month >= 3 && month <= 5) { // Apr–Jun
       messages = [
-        "Summer 2026 & 2027 Caribbean & Bahamas Cruises",
-        "2026 & 2027 Mediterranean & Europe Sailings",
-        "Alaska & Cool-Climate 2026 & 2027 Cruises"
+        "Summer 2026–2027 Caribbean Cruises",
+        "Mediterranean Cruises 2026–2027",
+        "Europe Sailings 2026–2027"
       ];
     } else if (month >= 6 && month <= 8) { // Jul–Sep
       messages = [
-        "Fall 2026 & 2027 Europe & Mediterranean Cruises",
-        "Caribbean & Mexico 2026 & 2027 Getaways",
-        "Group & Celebration 2026 & 2027 Cruises"
+        "Fall 2026–2027 Europe Cruises",
+        "Caribbean Getaways 2026–2027",
+        "Group Cruises 2026–2027"
       ];
     } else { // Oct–Dec
       messages = [
-        "Holiday & Winter 2026 & 2027 Caribbean Cruises",
-        "New Year & Wave Season 2026 & 2027 Deals",
-        "Last-Minute 2026 & 2027 Cruise Opportunities"
+        "Holiday 2026–2027 Cruises",
+        "Winter 2026–2027 Caribbean Cruises",
+        "Wave Season Deals 2026–2027"
       ];
     }
 
     let idx = 0;
 
     function setMessage() {
-      // Reset animation class to re-trigger CSS keyframes
       el.classList.remove('season-fade');
-      // Force reflow so the animation can restart
-      void el.offsetWidth;
+      void el.offsetWidth; // restart animation
 
       el.textContent = messages[idx];
       el.classList.add('season-fade');
@@ -311,7 +323,27 @@
     }
 
     setMessage();
-    setInterval(setMessage, 7000); // rotate every 7 seconds
+    setInterval(setMessage, 7000);
+  })();
+
+  // Hide announcement bar on scroll down, show on scroll up
+  (function () {
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', function () {
+      const currentY = window.scrollY;
+      const body = document.body;
+
+      if (currentY > lastScrollY && currentY > 120) {
+        // scrolling down
+        body.classList.add('hide-announcement');
+      } else {
+        // scrolling up or near top
+        body.classList.remove('hide-announcement');
+      }
+
+      lastScrollY = currentY;
+    });
   })();
 </script>
 
