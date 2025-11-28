@@ -2,21 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Travel by B & T | Ridgeway VA Travel Agent & Cruise Planner</title>
+  <title>Travel by B &amp; T | Ridgeway VA Travel Agent &amp; Cruise Planner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta name="description" content="Travel by B & T is an independent travel agency and Gateway Travel affiliate based in Ridgeway, Virginia, specializing in cruises, all-inclusive resorts, and custom vacations for Henry County and beyond.">
-  <meta name="keywords" content="Ridgeway VA travel agent, Henry County travel agency, cruise planner, Gateway Travel affiliate, Caribbean cruises, Europe cruises, all-inclusive resorts, Martinsville travel agent">
-  <meta name="author" content="Travel by B & T">
-  <link rel="canonical" href="https://travelbybt.com/">
+  <!-- Primary SEO -->
+  <meta name="description" content="Travel by B &amp; T is an independent travel agency and Gateway Travel affiliate based in Ridgeway, Virginia. We help Henry County travelers book cruises, all-inclusive resorts, and custom vacations with stress-free planning.">
+  <meta name="keywords" content="Ridgeway VA travel agent, Henry County travel agency, cruise planner, Gateway Travel affiliate, Caribbean cruise planner, Europe cruise planner, all-inclusive resort planner, Martinsville VA travel agent">
+  <meta name="author" content="Travel by B &amp; T">
+  <link rel="canonical" href="https://www.travelbybt.com/">
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Travel by B & T | Ridgeway VA Travel Agent & Cruise Planner">
-  <meta property="og:description" content="Independent travel advisors and Gateway Travel partners helping Henry County, VA travelers book cruises, all-inclusive resorts, and custom vacations.">
-  <meta property="og:url" content="https://travelbybt.com/">
-  <meta property="og:site_name" content="Travel by B & T">
+  <meta property="og:title" content="Travel by B &amp; T | Ridgeway VA Travel Agent &amp; Cruise Planner">
+  <meta property="og:description" content="Independent travel advisors and Gateway Travel partners helping Ridgeway &amp; Henry County, VA travelers book cruises, all-inclusive resorts, and custom vacations.">
+  <meta property="og:url" content="https://www.travelbybt.com/">
+  <meta property="og:site_name" content="Travel by B &amp; T">
+  <meta property="og:image" content="https://www.travelbybt.com/social-share.jpg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Travel by B &amp; T | Ridgeway VA Travel Agent &amp; Cruise Planner">
+  <meta name="twitter:description" content="Independent travel advisors &amp; Gateway Travel partners serving Ridgeway &amp; Henry County, VA with cruise and vacation planning.">
+  <meta name="twitter:image" content="https://www.travelbybt.com/social-share.jpg">
+
+  <!-- Sitemap hint -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.travelbybt.com/sitemap.xml">
+
+  <!-- JSON-LD: TravelAgency / LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Travel by B & T",
+    "url": "https://www.travelbybt.com/",
+    "description": "Independent travel agency and Gateway Travel affiliate based in Ridgeway, Virginia, specializing in cruises, all-inclusive resorts, and custom vacations.",
+    "image": "https://www.travelbybt.com/logo-travelbybt.png",
+    "telephone": "+1-276-226-0409",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ridgeway",
+      "addressRegion": "VA",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {
+        "@type": "AdministrativeArea",
+        "name": "Henry County, Virginia"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Martinsville, Virginia"
+      },
+      {
+        "@type": "Country",
+        "name": "United States"
+      }
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-276-226-0409",
+        "contactType": "customer service",
+        "email": "tpruitt@travelbybt.com",
+        "areaServed": "US"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-276-224-5660",
+        "contactType": "customer service",
+        "email": "bcuster@travelbybt.com",
+        "areaServed": "US"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ]
+  }
+  </script>
+
+  <!-- GA4 + Pixel placeholders (optional; fill in IDs when ready)
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -67,7 +140,7 @@
       <div class="hero-text">
         <h1>Your Passport to Extraordinary Journeys</h1>
         <p>
-          Travel by B & T delivers curated, stress-free vacations—cruises, all-inclusives, custom Europe itineraries,
+          Travel by B &amp; T delivers curated, stress-free vacations—cruises, all-inclusives, custom Europe itineraries,
           group trips, and more. You dream it, we handle the details.
         </p>
 
@@ -177,7 +250,7 @@
       <h2 class="section-title">Sample Cruise Deals &amp; Ideas</h2>
       <p class="section-intro">
         These are example concepts only—pricing and availability change constantly. We’ll quote current offers
-       when you’re ready to plan.
+        when you’re ready to plan.
       </p>
 
       <div class="grid three cruise-deals-grid">
@@ -283,7 +356,6 @@
     const month = new Date().getMonth(); // 0–11
     let messages;
 
-    // Keep messages short so they don't wrap
     if (month >= 0 && month <= 2) { // Jan–Mar
       messages = [
         "Winter 2026–2027 Cruises",
@@ -335,10 +407,8 @@
       const body = document.body;
 
       if (currentY > lastScrollY && currentY > 120) {
-        // scrolling down
         body.classList.add('hide-announcement');
       } else {
-        // scrolling up or near top
         body.classList.remove('hide-announcement');
       }
 
