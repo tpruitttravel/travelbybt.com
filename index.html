@@ -2,10 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About Travel by B & T | Ridgeway VA Travel Advisors</title>
+  <title>Travel by B & T | Ridgeway VA Travel Advisors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Learn about Travel by B & T, a Ridgeway, VA-based travel agency and Independent Affiliate of Gateway Travel, led by advisors Travis and Buzz." />
+  <meta
+    name="description"
+    content="Travel by B & T is a Ridgeway, VA-based travel agency and Independent Affiliate of Gateway Travel, specializing in cruises, all-inclusive resorts, Europe trips, and group travel."
+  />
   <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Schema.org JSON-LD for Travel Agency -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Travel by B & T",
+    "url": "https://www.travelbybt.com/",
+    "image": "https://www.travelbybt.com/logo-travelbybt.png",
+    "telephone": "+1-276-226-0409",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ridgeway",
+      "addressRegion": "VA",
+      "postalCode": "24148",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Henry County, Virginia"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Travis Pruitt"
+    },
+    "description": "Ridgeway, VA-based travel advisors specializing in cruises, all-inclusive resorts, Europe itineraries, and group travel, backed by Gateway Travel, Carnival Expert Diamond, and Sandals Elite training."
+  }
+  </script>
 </head>
 
 <body>
@@ -38,10 +69,23 @@
       </div>
     </header>
 
+    <!-- CERTIFIED CRUISE EXPERT RIBBON -->
+    <section class="tb-ribbon">
+      <div class="tb-container">
+        <div class="tb-ribbon-inner">
+          <span class="tb-ribbon-badge">Certified Cruise Expert</span>
+          <span class="tb-ribbon-text">
+            Backed by Carnival Expert – Diamond Level &amp; Sandals Elite Advisor Online Training Course (2025)
+          </span>
+        </div>
+      </div>
+    </section>
+
     <!-- MAIN -->
     <main>
       <div class="tb-container">
 
+        <!-- ABOUT / OVERVIEW SECTION -->
         <section class="tb-section">
           <div class="tb-section-header">
             <div class="tb-kicker">About</div>
@@ -79,12 +123,16 @@
                 <li>Clear communication about pricing, inclusions, and deadlines</li>
                 <li>Honest guidance on trade-offs between cruise lines, resorts, and itineraries</li>
                 <li>Support navigating check-in, documentation, and travel requirements</li>
-                <li>Advocacy when plans change or issues arise with Suppliers</li>
+                <li>Advocacy when plans change or issues arise with suppliers</li>
               </ul>
 
               <h3 class="tb-subheading" style="margin-top:1.3rem;">Advisor Experience</h3>
               <ul class="tb-list">
                 <li>Hands-on experience with cruising and all-inclusive travel</li>
+                <li>
+                  Formal supplier training, including Carnival Expert – Diamond Level Graduate and
+                  Sandals Elite Advisor Online Training Course (2025)
+                </li>
                 <li>Ongoing supplier and destination training through Gateway Travel</li>
                 <li>Backgrounds rooted in service, operations, and community leadership</li>
               </ul>
@@ -100,16 +148,47 @@
           </div>
 
           <div class="advisor-grid grid two">
+            <!-- Travis -->
             <div class="advisor-card">
               <div class="advisor-photo-wrap">
-                <img src="/travis-headshot.jpg" alt="Travis - Travel Advisor at Travel by B & T" class="advisor-photo" />
+                <img
+                  src="/travis-headshot.jpg"
+                  alt="Travis - Travel Advisor at Travel by B & T"
+                  class="advisor-photo"
+                />
               </div>
               <h3 class="tb-subheading">Travis – Travel Advisor</h3>
               <p class="advisor-role">
                 Cruise &amp; itinerary planning • Group coordination • Europe &amp; Caribbean focus
               </p>
-              <p class="tb-muted">
+
+              <!-- Credentials text -->
+              <p class="tb-muted small-text">
+                Carnival Expert – Diamond Level Graduate<br />
+                Sandals Elite Advisor Online Training Course (2025)
+              </p>
+
+              <!-- Credential badges -->
+              <div
+                class="advisor-cert-logo"
+                style="margin-top:0.6rem; display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center;"
+              >
+                <img
+                  src="/images/Carnival-Expert-Diamond-Level-Graduate_logo.jpg"
+                  alt="Carnival Expert Diamond Level Graduate badge"
+                  style="max-width:130px; height:auto;"
+                />
+                <img
+                  src="/images/elite-advisor.jpg"
+                  alt="Sandals Elite Advisor 2025 badge"
+                  style="max-width:130px; height:auto;"
+                />
+              </div>
+
+              <p class="tb-muted" style="margin-top:1rem;">
                 Travis is detail-oriented and process-driven, with a strong background in public service and operations.
+                As a Carnival Expert Diamond Level Graduate and Sandals Elite Advisor, he combines real-world experience
+                with supplier training to help you choose the right ships, resorts, and itineraries without the guesswork.
                 He focuses on making complex trips feel straightforward by breaking them down into clear steps and options.
               </p>
               <p class="tb-muted small-text">
@@ -118,9 +197,14 @@
               </p>
             </div>
 
+            <!-- Buzz -->
             <div class="advisor-card">
               <div class="advisor-photo-wrap">
-                <img src="/buzz-headshot.jpg" alt="Buzz - Travel Advisor at Travel by B & T" class="advisor-photo" />
+                <img
+                  src="/buzz-headshot.jpg"
+                  alt="Buzz - Travel Advisor at Travel by B & T"
+                  class="advisor-photo"
+                />
               </div>
               <h3 class="tb-subheading">Buzz – Travel Advisor</h3>
               <p class="advisor-role">
@@ -136,8 +220,111 @@
               </p>
             </div>
           </div>
+        </section>
 
-          <div class="tb-card" style="margin-top:1.8rem;">
+        <!-- TRUST & CREDENTIALS SECTION -->
+        <section class="tb-section tb-trust">
+          <div class="tb-container">
+            <div class="tb-section-header">
+              <div class="tb-kicker">Trust &amp; Credentials</div>
+              <h2 class="tb-section-title">Professional Training. Real Advisor Support.</h2>
+              <p class="tb-section-lead tb-muted">
+                Travel by B &amp; T combines hands-on planning experience with formal supplier certification
+                and host-agency backing—so you’re supported at every stage of your trip.
+              </p>
+            </div>
+
+            <div class="tb-trust-grid">
+              <!-- Carnival Badge -->
+              <div class="tb-trust-card">
+                <img
+                  src="/images/Carnival-Expert-Diamond-Level-Graduate_logo.jpg"
+                  alt="Carnival Expert Diamond Level Graduate"
+                  class="tb-trust-img"
+                />
+                <p class="tb-trust-label">
+                  Carnival Expert<br />
+                  Diamond Level Graduate
+                </p>
+              </div>
+
+              <!-- Sandals Badge -->
+              <div class="tb-trust-card">
+                <img
+                  src="/images/elite-advisor.jpg"
+                  alt="Sandals Elite Advisor 2025"
+                  class="tb-trust-img"
+                />
+                <p class="tb-trust-label">
+                  Sandals Elite Advisor<br />
+                  2025 Graduate
+                </p>
+              </div>
+
+              <!-- Gateway Travel -->
+              <div class="tb-trust-card">
+                <div class="tb-trust-placeholder">Gateway Travel</div>
+                <p class="tb-trust-label">
+                  Independent Affiliate<br />
+                  Host Agency Partner
+                </p>
+              </div>
+
+              <!-- Specialization -->
+              <div class="tb-trust-card">
+                <div class="tb-trust-placeholder">Cruises &amp; Groups</div>
+                <p class="tb-trust-label">
+                  Cruises • All-Inclusives<br />
+                  Group &amp; Custom Travel
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIALS SLIDER -->
+        <section class="tb-section tb-testimonials">
+          <div class="tb-section-header">
+            <div class="tb-kicker">Client Feedback</div>
+            <h2 class="tb-section-title">What Travelers Are Saying</h2>
+            <p class="tb-section-lead tb-muted">
+              Real trips, real people, and real outcomes from working with Travel by B &amp; T.
+            </p>
+          </div>
+
+          <div class="tb-card">
+            <div class="tb-testimonial-slider">
+              <div class="tb-testimonial active">
+                <p class="tb-muted">
+                  “Travis took what felt like an overwhelming cruise search and turned it into three clear options.
+                  We knew what was included, what wasn’t, and felt prepared from the moment we booked. We’ll absolutely
+                  use Travel by B &amp; T again.”
+                </p>
+                <p class="tb-muted small-text">— J. &amp; K. Martin, Caribbean Cruise</p>
+              </div>
+
+              <div class="tb-testimonial">
+                <p class="tb-muted">
+                  “Buzz helped us pull together a friends’ trip that actually worked for everyone’s schedule and budget.
+                  The communication was straightforward and there were no surprises at check-in.”
+                </p>
+                <p class="tb-muted small-text">— L. Turner, All-Inclusive Resort Stay</p>
+              </div>
+
+              <div class="tb-testimonial">
+                <p class="tb-muted">
+                  “Having local advisors who understood our airport options and work schedules made a huge difference.
+                  The Europe itinerary was realistic, not rushed, and we always knew what was coming next.”
+                </p>
+                <p class="tb-muted small-text">— D. &amp; M. Harris, Europe Trip</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LOCAL SERVICE & CTA -->
+        <section class="tb-section">
+          <div class="tb-card">
             <h3 class="tb-subheading">Serving Ridgeway, Henry County &amp; Surrounding Areas</h3>
             <p class="tb-muted">
               We know what it takes for local travelers to get to ports, airports, and destinations smoothly from this part
@@ -183,5 +370,28 @@
     </footer>
 
   </div>
+
+  <!-- Simple JS for testimonial rotation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slides = document.querySelectorAll('.tb-testimonial');
+      if (!slides.length) return;
+
+      let current = 0;
+
+      function showSlide(index) {
+        slides.forEach((el, i) => {
+          el.classList.toggle('active', i === index);
+        });
+      }
+
+      showSlide(current);
+
+      setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }, 9000);
+    });
+  </script>
 </body>
 </html>
