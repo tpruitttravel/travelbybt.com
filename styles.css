@@ -162,7 +162,7 @@ h3 {
 }
 
 /* =========================================
-   HEADER & NAV
+   HEADER & NAV (LEGACY)
 ========================================= */
 
 .site-header {
@@ -294,7 +294,7 @@ h3 {
 }
 
 /* =========================================
-   HOME HERO
+   HOME HERO (LEGACY)
 ========================================= */
 
 .hero {
@@ -435,7 +435,7 @@ h3 {
 }
 
 /* =========================================
-   ADVISOR / ABOUT PAGE
+   ADVISOR / ABOUT PAGE (LEGACY)
 ========================================= */
 
 .advisor-grid {
@@ -461,7 +461,7 @@ h3 {
   width: 170px;
   height: 170px;
   object-fit: cover;
-  border-radius: 12px; /* squared with gentle rounded corners */
+  border-radius: 12px;
   box-shadow: 0 14px 34px rgba(0,0,0,0.6);
 }
 
@@ -520,7 +520,7 @@ h3 {
 }
 
 /* =========================================
-   FOOTER
+   FOOTER (LEGACY)
 ========================================= */
 
 .site-footer {
@@ -573,7 +573,7 @@ h3 {
 }
 
 /* =========================================
-   RESPONSIVE TWEAKS
+   RESPONSIVE TWEAKS (LEGACY)
 ========================================= */
 
 @media (max-width: 768px) {
@@ -599,6 +599,7 @@ h3 {
     text-align: center;
   }
 }
+
 /* =========================================
    HOME PAGE (INDEX) – TRAVEL BY B & T LAYOUT
    Supports the tb-* classes used on index.html
@@ -728,129 +729,84 @@ h3 {
   }
 }
 
-/* ----- HERO – DARK FULL-WIDTH BANNER ----- */
+/* ----- HERO – DARK FULL-WIDTH BANNER (COLLAGE) ----- */
 
 .tb-hero {
   position: relative;
   color: #ffffff;
   padding: 3.4rem 0 3.6rem;
-  background-image:
-    linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(15,23,42,0.7)),
-    url("/images/hero-caribbean.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #020617;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
 }
 
 .tb-hero-inner {
   width: min(96%, 1100px);
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.2rem;
+  align-items: stretch;
 }
 
-.tb-hero-topline {
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.9;
-  margin-bottom: 0.4rem;
+/* Collage grid on the right */
+.tb-hero-media {
+  position: relative;
+  min-height: 260px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
 }
 
-.tb-hero-cruise-lines {
-  font-size: 0.9rem;
-  opacity: 0.95;
-  margin-bottom: 1.3rem;
+.tb-hero-img {
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.75);
 }
 
-.tb-hero-title {
-  font-size: clamp(2.1rem, 4vw, 2.5rem);
-  line-height: 1.2;
-  margin: 0 0 0.8rem;
+/* Use your four images in /images/ */
+.tb-hero-img-1 { background-image: url("/images/hero-caribbean.jpg"); }
+.tb-hero-img-2 { background-image: url("/images/hero-mediterranean.jpg"); }
+.tb-hero-img-3 { background-image: url("/images/hero-resort.jpg"); }
+.tb-hero-img-4 { background-image: url("/images/hero-group.jpg"); }
+
+/* Make the first image tall (2 rows) */
+.tb-hero-img-1 {
+  grid-row: 1 / span 2;
 }
 
-.tb-hero-subtitle {
-  font-size: 1rem;
-  line-height: 1.6;
-  opacity: 0.95;
-  max-width: 34rem;
-  margin-bottom: 1.4rem;
-}
-
-.tb-hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.6rem;
-}
-
-.tb-hero-badge {
+/* Overlay label on collage */
+.tb-hero-media-overlay {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.85rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.75);
   font-size: 0.8rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.45);
-  background: rgba(15,23,42,0.55);
-  white-space: nowrap;
-}
-
-.tb-hero-ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-bottom: 1.4rem;
-}
-
-.tb-hero-cta-primary,
-.tb-hero-cta-secondary {
   display: inline-flex;
+  gap: 0.4rem;
   align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1.5rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.9);
+}
+
+.tb-hero-media-dot {
+  width: 7px;
+  height: 7px;
   border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border: 1px solid transparent;
-  cursor: pointer;
-  text-decoration: none;
-  transition: 0.18s ease-out;
-}
-
-.tb-hero-cta-primary {
   background: #f6b100;
-  color: #1a1300;
-  border-color: #f6b100;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
 }
 
-.tb-hero-cta-primary:hover {
-  background: #ffca2f;
-  border-color: #ffca2f;
-}
-
-.tb-hero-cta-secondary {
-  background: transparent;
-  color: #ffffff;
-  border-color: rgba(255,255,255,0.7);
-}
-
-.tb-hero-cta-secondary:hover {
-  background: rgba(0,0,0,0.4);
-}
-
-.tb-hero-support-line {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-@media (max-width: 640px) {
-  .tb-hero {
-    padding: 3rem 0 3.1rem;
-  }
+/* Responsive tweaks for hero */
+@media (max-width: 800px) {
   .tb-hero-inner {
-    width: min(96%, 1100px);
+    grid-template-columns: minmax(0, 1fr);
   }
-  .tb-hero-title {
-    font-size: 2.1rem;
+  .tb-hero-media {
+    order: -1;
   }
 }
 
@@ -986,7 +942,7 @@ h3 {
   color: #e0e4ff;
 }
 
-/* ----- FOOTER (tb-* version maps to existing footer styles) ----- */
+/* ----- FOOTER (tb-*) ----- */
 
 .tb-footer {
   background: #05060a;
@@ -1005,6 +961,12 @@ h3 {
   max-width: 60%;
   margin-bottom: 0.7rem;
   filter: drop-shadow(0 10px 25px rgba(0,0,0,0.75));
+}
+
+.footer-text {
+  max-width: 420px;
+  color: #c0c4dd;
+  font-size: 0.9rem;
 }
 
 .tb-footer-links {
@@ -1031,94 +993,17 @@ h3 {
   color: #8b92b6;
   text-align: left;
 }
+
 /* =========================================
    HOME HERO COLLAGE OVERRIDE (INDEX)
-   Brings back dark banner + 4-image collage
 ========================================= */
 
-/* Override earlier tb-hero to remove full background image */
+/* Override earlier tb-hero shadow/background to integrate with overall layout */
 .tb-hero {
-  position: relative;
-  color: #ffffff;
-  padding: 3.4rem 0 3.6rem;
-  background: #020617;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
+  box-shadow: none;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+  background: radial-gradient(circle at top left, #0b1020 0, #020617 55%, #020617 100%);
 }
-
-/* Two-column layout: text left, collage right */
-.tb-hero-inner {
-  width: min(96%, 1100px);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 2.2rem;
-  align-items: stretch;
-}
-
-/* Collage grid on the right */
-.tb-hero-media {
-  position: relative;
-  min-height: 260px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.tb-hero-img {
-  background-size: cover;
-  background-position: center;
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.75);
-}
-
-/* Use your four images in /images/ */
-.tb-hero-img-1 { background-image: url("/images/hero-caribbean.jpg"); }
-.tb-hero-img-2 { background-image: url("/images/hero-mediterranean.jpg"); }
-.tb-hero-img-3 { background-image: url("/images/hero-resort.jpg"); }
-.tb-hero-img-4 { background-image: url("/images/hero-group.jpg"); }
-
-/* Make the first image tall (2 rows) */
-.tb-hero-img-1 {
-  grid-row: 1 / span 2;
-}
-
-/* Overlay label on collage */
-.tb-hero-media-overlay {
-  position: absolute;
-  left: 0.85rem;
-  bottom: 0.85rem;
-  padding: 0.5rem 0.9rem;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.75);
-  font-size: 0.8rem;
-  display: inline-flex;
-  gap: 0.4rem;
-  align-items: center;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.9);
-}
-
-.tb-hero-media-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: #f6b100;
-}
-
-/* Responsive tweaks for small screens */
-@media (max-width: 800px) {
-  .tb-hero-inner {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .tb-hero-media {
-    order: -1;
-  }
-}
-/* =========================================
-   REFINEMENTS – SMOOTHER, LESS BOXY HOME
-========================================= */
 
 /* Make header/hero/content share the same max-width rhythm */
 .tb-hero-inner,
@@ -1128,40 +1013,32 @@ h3 {
   margin: 0 auto;
 }
 
-/* Smooth hero so it feels like a banner, not a big card */
-.tb-hero {
-  /* keep dark banner feel, but drop the heavy boxy shadow */
-  box-shadow: none;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
-  background: radial-gradient(circle at top left, #0b1020 0, #020617 55%, #020617 100%);
-}
-
 /* Slightly more breathing room under hero */
 .tb-section {
   padding-top: 2.7rem;
 }
 
-/* Soften the cards – still modern, but less “brick” */
+/* Soften the cards */
 .tb-card {
   background: radial-gradient(circle at top, #101324, #060710);
   border-radius: 16px;
   padding: 1.4rem 1.5rem;
-  border: 1px solid rgba(82, 90, 130, 0.45);       /* less harsh */
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);      /* a bit softer */
+  border: 1px solid rgba(82, 90, 130, 0.45);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
 }
 
-/* Slightly lighter text inside cards for readability */
+/* Slightly lighter text inside cards */
 .tb-muted,
 .tb-list {
   color: #dde1ff;
 }
 
-/* Hero right-side collage: round corners just a bit more “premium” */
+/* Hero right-side collage: round corners a bit more */
 .tb-hero-img {
   border-radius: 18px;
 }
 
-/* Reduce header weight a touch so it doesn’t feel like a box on top of a box */
+/* Reduce header weight a touch */
 .tb-header {
   border-bottom: 1px solid rgba(148, 163, 184, 0.35);
 }
@@ -1171,3 +1048,109 @@ h3 {
   padding-bottom: 0.6rem;
 }
 
+/* =========================================
+   RIBBON / TRUST / TESTIMONIALS (NEW)
+========================================= */
+
+/* Ribbon just under header */
+.tb-ribbon {
+  background: #020617;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.6rem 0;
+}
+
+.tb-ribbon-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.tb-ribbon-badge {
+  border-radius: 999px;
+  border: 1px solid rgba(248, 250, 252, 0.5);
+  padding: 0.25rem 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fefce8;
+}
+
+.tb-ribbon-text {
+  color: #e5e7eb;
+  opacity: 0.9;
+  font-size: 0.88rem;
+}
+
+/* Trust & Credentials grid */
+.tb-trust {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.tb-trust .tb-section-header {
+  text-align: center;
+}
+
+.tb-trust .tb-section-lead {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.tb-trust-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.6rem;
+}
+
+.tb-trust-card {
+  text-align: center;
+}
+
+.tb-trust-img {
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.tb-trust-placeholder {
+  min-height: 90px;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  padding: 1rem;
+  color: #e5e7eb;
+}
+
+.tb-trust-label {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  line-height: 1.3;
+}
+
+/* Testimonials */
+.tb-testimonials .tb-card {
+  margin-top: 1.4rem;
+}
+
+.tb-testimonial-slider {
+  position: relative;
+  min-height: 120px;
+}
+
+.tb-testimonial {
+  display: none;
+}
+
+.tb-testimonial.active {
+  display: block;
+}
